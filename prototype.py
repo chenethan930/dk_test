@@ -11,11 +11,7 @@ client = OpenAI(
     api_key = st.secrets["api_key"],
 )
 
-prompt = """
-Generate an image with the given style in the first input image. The output image should be in Chinese figure painting, characterized by fine brushwork, delicate lines, and a focus on traditional attire and formal composition. The style emphasizes meticulous detail and symbolic representation, hallmarks of the gongbi technique in traditional Chinese art
-The person in the output image should look like the second input image, including their facial features. However, the person in output image should always wear a traditional Chinese robe, it's a deep blue robe with wide sleeves, and a broad, black sash draped diagonally across the chest. Underneath, a white inner garment with a visible collar is worn. This attire reflects the formal, dignified clothing of a traditional Chinese official, it also features a tall, angular black hat with distinct folds.
-In addition, the person should not make any gestures and poses, but facial features are allowed (e.g. making faces, blinking, smiling). If the person is female and has long hair, you should make her have an updo in a tradition Chinese style. If the person has bangs, you should make her bangs wispy in a tradintional Chinese style. If the person is smiling, make sure they smile without showing teeth. Make sure the person look young and slim, and try to make their skin in good condition. Make the background green.
-"""
+prompt = st.secrets["prompt"]
 
 st.header("Ancient Me_v3")
 with st.form("my_form"):
